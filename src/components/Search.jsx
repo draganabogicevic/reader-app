@@ -1,5 +1,7 @@
 import { useState } from 'react'
+
 import { useSearchContext } from '../context/searchContext'
+
 import { Box, FormControl, Input } from '@chakra-ui/react' 
 
 const Search = () => {
