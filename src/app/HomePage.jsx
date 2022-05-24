@@ -11,7 +11,7 @@ import FallbackUi from '../components/FallbackUi'
 import { bookService } from '../library/services/service'
 import { useSearchContext } from '../context/searchContext'
 
-import { Input, Box, Heading, Text, FormControl, FormLabel, InputGroup, Button, InputLeftAddon } from '@chakra-ui/react'
+import { Input, Box, Heading, Text, FormControl, SimpleGrid, InputGroup, Button, InputLeftAddon } from '@chakra-ui/react'
 
 const validationSchema = yup.object(
     {
@@ -88,7 +88,7 @@ const HomePage = () => {
 
  
     return (
-        <Box minHeight='100vh' mx={['20px', '20px', 0]} bgImage='url(https://img.freepik.com/free-photo/book-with-opened-pages-shape-heart-isolated-white-backg_1232-1696.jpg?t=st=1653388820~exp=1653389420~hmac=f00d848ca6a433faac47aa371c105704c4287b3f12b0cf4a4ebcd80ac36d1296&w=1480)' bgPosition='top' bgRepeat="no-repeat">
+        <Box minHeight='100vh' mx={['20px', '20px', 0]} bgImage='url(https://img.freepik.com/free-photo/book-with-opened-pages-shape-heart-isolated-white-backg_1232-1696.jpg?t=st=1653388820~exp=1653389420~hmac=f00d848ca6a433faac47aa371c105704c4287b3f12b0cf4a4ebcd80ac36d1296&w=1480)' bgPosition='top' bgRepeat="no-repeat" >
             <Box maxWidth={['100%', '100%', '50%']} m='auto' textAlign='center'>
                 <Heading mt='70px' mb='30px'>Reader application</Heading>
                 <Text mb='20px'>Welcome to Reader app! Find, track, note quotes from your favorite books. The one you read, you are reading and you would like to read. Make your custom reading list, edit or change it. All in one place. Simple. Efficiently. </Text>
@@ -124,13 +124,13 @@ const HomePage = () => {
                     
                 </Box>
             </form>
-            <Box display='flex' flexDir='row' flexWrap='wrap' justifyContent='center' maxWidth={['100%', '100%', '80%']} m='auto'>
+            <SimpleGrid spacing={4} columns={4} maxWidth={['100%', '100%', '80%']} m='auto'>
                 {hasFind && data.data.docs.map(b => (
-                    <div key={b._version_} onClick={() => autoFillSearchedData(b.title, b.author_name[0])}>
-                        <Box padding='20px' margin='10px' border='1px solid black' borderRadius='10px' bg='white'>{b.title}</Box>
-                    </div>
+                    <Box boxShadow='10px 10px 5px 0px rgba(0,0,0,0.33)' key={b._version_} _hover={{cursor: 'pointer'}} border='1px solid gray' bg='white' borderRadius='10px' p='10px' onClick={() => autoFillSearchedData(b.title, b.author_name[0])}>
+                        {b.title}
+                    </Box>
                 ))}
-            </Box>
+            </SimpleGrid>
            
             
         </Box>
