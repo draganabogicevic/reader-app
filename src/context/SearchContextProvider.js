@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { SearchContext } from './searchContext'
 
-export const SearchContextProvider = props => {
+const SearchContextProvider = props => {
     const [query, setQuery] = useState('')
 
     const searchHandler = (text) => {
@@ -21,3 +21,5 @@ export const SearchContextProvider = props => {
         </SearchContext.Provider>
     )
 }    
+
+export default SearchContextProvider

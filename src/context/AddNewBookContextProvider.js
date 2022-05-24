@@ -10,7 +10,6 @@ const AddNewBookContextProvider = props => {
         })
     }
 
-    console.log(data)
 
     const addNewBookContextValue = {
         data,

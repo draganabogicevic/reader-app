@@ -16,11 +16,9 @@ const Search = () => {
       
     return (
         <Box>
-            <form>
-                <FormControl>
-                    <Input value={searchText} type='text' placeholder='Search for the title' onChange={ e => handleSearch(e.target.value)}/>
-                </FormControl>
-            </form>
+            <FormControl>
+                <Input value={searchText} type='text' placeholder='Search for the title' onChange={ e => handleSearch(e.target.value)}/>
+            </FormControl>
         </Box>
     )
 }

@@ -5,9 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  /* background-image: url('https://img.freepik.com/free-photo/book-with-opened-pages-shape-heart-isolated-white-backg_1232-1696.jpg?t=st=1653388820~exp=1653389420~hmac=f00d848ca6a433faac47aa371c105704c4287b3f12b0cf4a4ebcd80ac36d1296&w=1480');
+  background-repeat: no-repeat;
+  background-size: contain; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+    background-color: red;
 }

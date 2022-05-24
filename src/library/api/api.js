@@ -8,4 +8,3 @@ export const Api = Axios.create({
   baseURL: BASE_API_ENDPOINT
 })
 
-console.log(Api)

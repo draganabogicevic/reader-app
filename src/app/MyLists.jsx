@@ -42,7 +42,6 @@ const MyLists = () => {
 
     const handleListCreate = () => {
         const list = new List(selectedName)
-        console.log(list)
         list.addBooks(selectedBook)
         setBooks(list.books)
         setNewList(list)
